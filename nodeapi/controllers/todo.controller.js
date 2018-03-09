@@ -1,4 +1,4 @@
-var TodoService = require('../../services/todo.service');
+var TodoService = require('../services/todo.service');
 
 module.exports.GetTodos = function (req,res,next) { 
     TodoService.GetAll(function (err,todos) { 
