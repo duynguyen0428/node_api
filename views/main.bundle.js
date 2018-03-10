@@ -196,7 +196,7 @@ var TodoService = /** @class */ (function () {
         this.http = http;
     }
     TodoService.prototype.GetAllTodo = function () {
-        return this.http.get('https://evening-bastion-44637.herokuapp.com/api/todo/');
+        return this.http.get('api/todo/');
     };
     TodoService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* Injectable */])(),
