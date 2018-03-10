@@ -146,11 +146,15 @@ var TodoListComponent = /** @class */ (function () {
         this.todoService = todoService;
     }
     TodoListComponent.prototype.ngOnInit = function () {
+        this.getTodos();
     };
     TodoListComponent.prototype.getTodos = function () {
         var _this = this;
         this.todoService.GetAllTodo()
-            .subscribe(function (todos) { return _this.todos = todos; });
+            .subscribe(function (todos) {
+            console.log(todos);
+            _this.todos = todos;
+        });
     };
     TodoListComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
@@ -192,7 +196,7 @@ var TodoService = /** @class */ (function () {
         this.http = http;
     }
     TodoService.prototype.GetAllTodo = function () {
-        return this.http.get('/api/todo');
+        return this.http.get('https://evening-bastion-44637.herokuapp.com/api/todo/');
     };
     TodoService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* Injectable */])(),
