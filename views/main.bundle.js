@@ -27,7 +27,7 @@ module.exports = ""
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n<div class=\"todolist\">\n  <app-todo-list></app-todo-list>  \n</div>\n\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<!-- <div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div> -->\n<div class=\"jumbotron vertical-center\">\n  <div class=\"container\">\n    <h1 class=\"display-4\">Fluid jumbotron</h1>\n    <!-- <img width=\"300\" class=\"center\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\"> -->\n  </div>\n</div>\n\n\n<div class=\"todolist\">\n  <app-todo-list></app-todo-list>  \n</div>\n\n"
 
 /***/ }),
 
@@ -115,14 +115,14 @@ var AppModule = /** @class */ (function () {
 /***/ "./src/app/todo-list/todo-list.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".todolist{\r\n    background-color:whitesmoke;\r\n}"
 
 /***/ }),
 
 /***/ "./src/app/todo-list/todo-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <p>\n  todo-list works!\n</p> -->\n<!-- <p>{{todos}}</p> -->\n<!-- <ul *ngFor = \"let todo of todos\">\n  <li>{{todo.title}}</li>\n</ul> -->\n<table class=\"table\">\n  <thead>\n    <tr>\n      <th scope=\"col\">Title</th>\n    </tr>\n  </thead>\n  <tbody *ngFor = \"let todo of todos\">\n    <tr>\n      <th scope=\"row\">{{todo.title}}</th>\n    </tr>\n  </tbody>\n</table>"
+module.exports = "<div class=\"input-group mb-3\">\n  <input type=\"text\" class=\"form-control\" placeholder=\"Add Todo\" aria-label=\"Recipient's username\" aria-describedby=\"basic-addon2\">\n  <div class=\"input-group-append\">\n    <button class=\"btn btn-outline-secondary\" type=\"button btn-primary\">Button</button>\n  </div>\n</div>\n<div>\n  <table class=\"table table-striped\">\n    <tbody *ngFor = \"let todo of todos\">\n      <tr>\n        <th scope=\"row\">{{todo.title}}</th>\n      </tr>\n    </tbody>\n  </table>\n</div>"
 
 /***/ }),
 
