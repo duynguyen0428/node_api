@@ -8,7 +8,7 @@ var cors = require('cors');
 
 var index = require('./routes/index');
 
-var users = require('./routes/users');
+var users = require('./routes/api/user.route');
 var todo = require('./routes/api/todo.route');
 
 var config = require('./config/config');
