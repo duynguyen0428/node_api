@@ -6,6 +6,12 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 
+var config = require('./config/config');
+
+mongoose = require('mongoose');
+
+mongoose.connect(config.db);
+
 var index = require('./routes/index');
 
 var users = require('./routes/api/user.route');

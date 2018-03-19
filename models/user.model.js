@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'),
     config = require('../config/config'),
     Schema = mongoose.Schema,
-    bcrypt = require(bcrypt),
+    bcrypt = require('bcrypt'),
     SALT_WORK_FACTOR = config.SALT_WORK_FACTOR;
 
 
@@ -12,7 +12,7 @@ var UserSchema = new Schema({
         unique : true,
         trim: true,
         lowercase: true,
-        validate : [validateEmail,'Please fill a valid email address'],
+        // validate : [validateEmail,'Please fill a valid email address'],
         index: { unique: true }
     },
     password: {
@@ -26,7 +26,7 @@ var UserSchema = new Schema({
     }
 });
 
-UserSchema.pre(save, function(next) {
+UserSchema.pre('save', function(next) {
     var user = this;
 
     // only hash the password if it has been modified (or is new)
