@@ -1,5 +1,8 @@
-var TodoModel = require('../models/todo');
+var TodoModel = require('../models/todo'),
+    config = require('../config/config'),
+    mongoose = require('mongoose');
 
+mongoose.connect(config.db);
 module.exports.GetAll = function(next){
     TodoModel.find({},function(err,todos){
         if(err) next(err);

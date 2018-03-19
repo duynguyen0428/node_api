@@ -13,10 +13,6 @@ var todo = require('./routes/api/todo.route');
 
 var config = require('./config/config');
 
-var mongoose = require('mongoose');
-
-mongoose.connect(config.db);
-
 var app = express();
 
 app.use(function(req, res, next) {
