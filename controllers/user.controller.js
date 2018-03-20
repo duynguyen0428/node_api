@@ -19,7 +19,7 @@ var UserService = require('../services/user.service');
  }
 
  module.exports.FindUser = function(req,res,next) {
-    var email = req.body.email;
+    var email = req.params.email;
     UserService.findUser(email,function(err,user){
         if(err) return res.status(400).json({'message' : 'Fail to find user'});
         return res.status(200).json(user);

@@ -3,7 +3,7 @@ var router = express.Router();
 var userController = require('../../controllers/user.controller');
 /* GET home page. */
 router
-.get('/', userController.FindUser)
+.get('/:email', userController.FindUser)
 .post('/',userController.Create)
 .delete('/',userController.Remove);
 
