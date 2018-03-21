@@ -3,6 +3,8 @@ var TaskController = require('../controllers/task.controller'),
     router = express.Router();
 
  router
+    .get('/',TaskController.getAllTask)    
+    .get('/incomplete',TaskController.getIncompleteTask)
     .post('/',TaskController.createTask)
-    .get('/',TaskController.getAllTask);
+    .delete('/',TaskController.deleteTask);
 module.exports = router;

@@ -15,5 +15,19 @@ module.exports = {
             if(err) return res.status(400).json({'message':"can't find any task"});
             else return res.status(201).json(tasks);
         })
+    },
+    deleteTask : function(req,res,next){
+        var query = req.body;
+        TaskService.removeTask(query,function(err,response){
+            if(err) return res.status(400).json(err.message);
+            else return res.status(200).json(response);
+        });
+    },
+    getIncompleteTask : function(req,res,next){
+        var condition = {'completed': false};
+        TaskService.findTask(condition).exec(function(err,response){
+            if(err) return res.status(400).json(err.message);
+            else return res.status(200).json(response);
+        });
     }
 }

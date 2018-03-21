@@ -11,20 +11,14 @@ module.exports = {
             else cb(null);
         });
     },
-    findTaskByTitle : function(title,cb){
-        TaskModel.find({'title':title}).exec(function(err,task){
+    findTask : function(query,cb){
+        TaskModel.find(query).exec(function(err,response){
             if(err) cb(err);
-            else cb(null,task);
+            else cb(null,response);  
         });
     },
-    findTaskById : function(id,cb){
-        TaskModel.find({'_id':title}).exec(function(err,task){
-            if(err) cb(err);
-            else cb(null,task);
-        });
-    },
-    removeTask : function(_id,cb){
-        TaskModel.findByIdAndRemove(id).exec(function(err,response){
+    removeTask : function(qurey,cb){
+        TaskModel.remove(query).exec(function(err,response){
             if(err) cb(err);
             else cb(null,response);
         });
