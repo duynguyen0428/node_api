@@ -17,10 +17,10 @@ module.exports = {
             else cb(null,response);  
         });
     },
-    removeTask : function(qurey,cb){
-        TaskModel.remove(query,function(err,response){
+    removeTask : function(query,cb){
+        TaskModel.remove(query,function(err){
             if(err) cb(err);
-            else cb(null,response);
+            else cb(null);
         });
     },
     getTasks : function(cb){

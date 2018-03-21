@@ -13,6 +13,10 @@ var TaskSchema = new Schema({
     duedate : {
         type : Date,
         required : [true,"Due date can't be blank"]
+    },
+    completed : {
+        type : boolean,
+        default : false
     }
 });
 
