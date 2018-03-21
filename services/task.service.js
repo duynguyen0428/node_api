@@ -12,13 +12,13 @@ module.exports = {
         });
     },
     findTask : function(query,cb){
-        TaskModel.find(query).exec(function(err,response){
+        TaskModel.find(query,function(err,response){
             if(err) cb(err);
             else cb(null,response);  
         });
     },
     removeTask : function(qurey,cb){
-        TaskModel.remove(query).exec(function(err,response){
+        TaskModel.remove(query,function(err,response){
             if(err) cb(err);
             else cb(null,response);
         });
