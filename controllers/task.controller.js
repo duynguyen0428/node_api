@@ -25,7 +25,7 @@ module.exports = {
     },
     getIncompleteTask : function(req,res,next){
         var condition = {'completed': false};
-        TaskService.findTask(condition).exec(function(err,response){
+        TaskService.findTask(condition,function(err,response){
             if(err) return res.status(400).json(err.message);
             else return res.status(200).json(response);
         });
