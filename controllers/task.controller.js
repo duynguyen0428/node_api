@@ -13,7 +13,7 @@ module.exports = {
     getAllTask : function(req,res,next){
         TaskService.getTasks(function(err,tasks){
             if(err) return res.status(400).json({'message':"can't find any task"});
-            else return res.status(201).json(tasks);
+            else return res.status(200).json(tasks);
         })
     },
     deleteTask : function(req,res,next){
