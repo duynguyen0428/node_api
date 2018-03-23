@@ -5,6 +5,6 @@ var todoController = require('../../controllers/todo.controller');
 router
 .get('/', todoController.GetTodos)
 .post('/',todoController.Create)
-.delete('/',todoController.Remove);
+.delete('/:_id',todoController.Remove);
 
 module.exports = router;

@@ -16,7 +16,7 @@ module.exports.GetTodos = function (req,res,next) {
  };
 
  module.exports.Remove = function(req,res,next) {
-     TodoService.Remove(req.body._id,function (err,todo) {
+     TodoService.Remove(req.params._id,function (err,todo) {
         if(err) return res.status(500).json({'err':err});
         else return res.status(200).json({'message':'removed'});
        });
