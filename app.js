@@ -18,7 +18,8 @@ var users = require('./routes/api/user.route');
 var todo = require('./routes/api/todo.route');
 var task = require('./routes/task.route');
 var item = require('./routes/api/item.route');
-
+var signin = require('./routes/acct.route');
+var auth = require('./middleware/auth/auth');
 var config = require('./config/config');
 
 var app = express();
@@ -44,11 +45,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'views')));
 
+
+
 app.use('/', index);
 app.use('/users', users);
-app.use('/api/todo',todo);
+app.use('/api/todo',auth.isAuthenticated,todo);
 app.use('/task',task);
 app.use('/api/item',item);
+app.use('/auth',signin);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
