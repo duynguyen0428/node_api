@@ -30,7 +30,8 @@ router
                     return res.status(200).header({
                         auth : token
                     }).json({
-                        "message":"success"
+                        "message":"success",
+                        "auth" : token
                     });
                 }
             });
